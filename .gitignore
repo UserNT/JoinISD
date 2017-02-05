@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TestConsole/Debug
+/TestConsole/Debug
+/TestConsole/.vs/TestConsole/v14
+/TestConsole/TestConsole.VC.VC.opendb
+/TestConsole/TestConsole.VC.db
