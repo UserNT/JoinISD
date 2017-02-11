@@ -14,8 +14,8 @@ int main()
 {
 	//оператор вывода в поток
 	cout << "Hello World" << endl;	
-	cout << "Name: \tVitalij\n";
-	cout << "Sur: \tKolodka\n";
+	cout << "Name: \tAndrey\n";
+	cout << "Sur: \tIvanov\n";
 	getch();
 	//успешное завершение программы
 	return 0;
