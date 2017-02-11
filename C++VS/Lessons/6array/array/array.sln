@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "array", "array\array.vcproj", "{2E27D90E-6C87-4DCC-93D1-81F8880D7B4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prostie 4isla", "prostie 4isla\prostie 4isla.vcproj", "{736727DA-A467-4CDF-BC3B-E8F4A2F871B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prostoe_chislo", "prostoe_chislo\prostoe_chislo.vcproj", "{419E52D5-7135-4B9D-9DD2-7654D3E2CE87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E27D90E-6C87-4DCC-93D1-81F8880D7B4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E27D90E-6C87-4DCC-93D1-81F8880D7B4F}.Debug|Win32.Build.0 = Debug|Win32
+		{2E27D90E-6C87-4DCC-93D1-81F8880D7B4F}.Release|Win32.ActiveCfg = Release|Win32
+		{2E27D90E-6C87-4DCC-93D1-81F8880D7B4F}.Release|Win32.Build.0 = Release|Win32
+		{736727DA-A467-4CDF-BC3B-E8F4A2F871B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{736727DA-A467-4CDF-BC3B-E8F4A2F871B3}.Debug|Win32.Build.0 = Debug|Win32
+		{736727DA-A467-4CDF-BC3B-E8F4A2F871B3}.Release|Win32.ActiveCfg = Release|Win32
+		{736727DA-A467-4CDF-BC3B-E8F4A2F871B3}.Release|Win32.Build.0 = Release|Win32
+		{419E52D5-7135-4B9D-9DD2-7654D3E2CE87}.Debug|Win32.ActiveCfg = Debug|Win32
+		{419E52D5-7135-4B9D-9DD2-7654D3E2CE87}.Debug|Win32.Build.0 = Debug|Win32
+		{419E52D5-7135-4B9D-9DD2-7654D3E2CE87}.Release|Win32.ActiveCfg = Release|Win32
+		{419E52D5-7135-4B9D-9DD2-7654D3E2CE87}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
