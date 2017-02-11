@@ -1,0 +1,2 @@
+﻿  Source.cpp
+LINK : fatal error LNK1104: cannot open file 'D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons10\Lessons10\Debug\sincos.exe'

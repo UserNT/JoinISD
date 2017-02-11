@@ -1,0 +1,4 @@
+﻿  Source.cpp
+d:\проекты c++ vs\repos\c++vs\exersice\lessons11\xo\xo\source.cpp(118): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  XO.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons11\XO\Debug\XO.exe
+  XO.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons11\XO\Debug\XO.pdb (Full PDB)
