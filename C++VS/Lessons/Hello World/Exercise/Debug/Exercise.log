@@ -1,0 +1,6 @@
+﻿  main.cpp
+e:\visual studio projects\joinisd\c++vs\lessons\hello world\exercise\main.cpp(12): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Exercise.vcxproj -> E:\Visual Studio Projects\JoinISD\C++VS\Lessons\Hello World\Debug\Exercise.exe
+  Exercise.vcxproj -> E:\Visual Studio Projects\JoinISD\C++VS\Lessons\Hello World\Debug\Exercise.pdb (Full PDB)
