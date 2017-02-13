@@ -52,8 +52,10 @@ int main()
 				 Mod = tMod;			
 		     }						
 	}
-
-	cout << "Мод = " << Mod << endl;
+	if (count == 1)
+		cout << "Числа не повторяются!";
+	else
+		cout << "Мод = " << Mod << endl;
 
 	_getch();
 	return 0;
