@@ -14,12 +14,13 @@ int main()
 
 	cout << "Enter string: ";
 	cin.getline(str,N);
+	int length = strlen(str);
 
-	for(int i(0); i < (strlen(str)/2); i++)
+	for(int i(0); i < (length /2); i++)
 	{
 		temp = str[i];
-		str[i] = str[strlen(str)-(i+1)];
-		str[strlen(str)-(i+1)] = temp;
+		str[i] = str[length - (i+1)];
+		str[length - (i+1)] = temp;
 	}
 	cout << "Resultat: " << str;
 
