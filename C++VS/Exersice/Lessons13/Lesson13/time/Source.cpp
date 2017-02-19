@@ -20,16 +20,11 @@ void ShowTime(Time &t)
 void SetTime(Time &t)
 {
 	cout << "Введите время чч мм сс: ";
-	while (!(cin >> t.hours >> t.minutes >> t.seconds) || t.hours < 0 || t.minutes < 0 || t.seconds < 0 || t.minutes > 60 || t.seconds > 60)
-	{
-		/*
-		if (isalpha(cin.get()))
-		{
-			cout << "Вы ввели букву!\n";
-			cin.clear();
-			while (cin.get() != '\n');
-		}
-		*/
+	cin >> t.hours >> t.minutes >> t.seconds;
+
+	while (t.hours < 0 || t.minutes < 0 || t.seconds < 0 || t.minutes > 60 || t.seconds > 60)
+	{				
+		
 		if (t.hours < int(0) || t.minutes < int(0) || t.seconds < int(0))
 		{
 			cout << "Вы ввели отрицательное число!\n";
@@ -37,6 +32,7 @@ void SetTime(Time &t)
 		if (t.minutes > 60 || t.seconds > 60)
 			cout << "Минуты и секунды должны быть меньше 60!\n";
 		cout << "Введите время чч мм сс: ";
+		cin >> t.hours >> t.minutes >> t.seconds;
 	}
 }
 
