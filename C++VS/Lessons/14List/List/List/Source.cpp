@@ -72,7 +72,7 @@ void Add_end(list** end, const A &a)
 	}
 }
 
-void Insert(list **begin, const A &a)
+void Insert(list** begin, const A &a)
 {
 	list* ins = new list;
 	ins->a = a;
