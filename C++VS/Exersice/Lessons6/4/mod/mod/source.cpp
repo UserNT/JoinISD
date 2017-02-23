@@ -11,7 +11,7 @@ int main()
 	int A[size];
 	int Mod;
 	int temp;
-	int count = 0;
+	int count = 1;
 	int tcount = 1;
 	int tMod = 0;
 
@@ -38,7 +38,7 @@ int main()
 			}		
 		}	
 	
-	Mod = A[0];
+
 	for(int i = 0; i < size - 1; i++)
 	{
 		if (A[i] == A[i+1])
@@ -46,11 +46,11 @@ int main()
 			tcount++;
 			tMod = A[i];
 		}
-		else if (count < tcount)
-		{	
-			count = tcount;
-			Mod = tMod;			
-		}						
+		else if(count < tcount)
+		     {	
+				 count = tcount;
+				 Mod = tMod;			
+		     }						
 	}
 	if (count == 1)
 		cout << "„исла не повтор€ютс€!";

@@ -26,7 +26,7 @@ int main()
 			cout << i << "й :";
 			
 		}
-		while ((evaluation[i] <= 0) || (evaluation[i] > 5))
+		while ((evaluation[i] < 0) || (evaluation[i] > 5))
 		{
 			cout << "ќценка должна быть от 1 до 5!\n";
 			cout << i << "й :";

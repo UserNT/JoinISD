@@ -34,6 +34,20 @@ void OutStack(list* first)
 
 }
 
+void Delete(list** b)
+{
+	list* t;
+	list* t1 = *b;
+	while (t1)
+	{
+		t = t1;
+		t1 = t1->next;
+		delete t;		
+	}
+	*b = NULL;
+
+}
+
 
 
 int main()
@@ -55,6 +69,8 @@ int main()
 	AddStack(&first, e);
 	
 	OutStack(first);
+
+	Delete(&first);
 
 	_getch();
 	return 0;
