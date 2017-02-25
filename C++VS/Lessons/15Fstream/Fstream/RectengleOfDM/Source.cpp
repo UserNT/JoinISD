@@ -59,6 +59,7 @@ void PrintInfo(Rectangle rect)
 
 	cout << "Периметр = " << 2 * (dist1 + dist2) << endl;
 	cout << "Площадь = " << (dist1*dist2) << endl;
+	_getch();
 }
 
 int abs(int a)
@@ -80,7 +81,7 @@ int main()
 	Rectangle rect;
 
 	bool fileInput = false;
-	bool fileRead = true;
+	bool fileRead = false;
 
 	do
 	{
@@ -127,7 +128,7 @@ int main()
 
 		system("cls");
 
-	} while (choise != 'y');
+	} while (choise != 'y' && !fin.eof());
 
 	_getch();
 	return 0;
