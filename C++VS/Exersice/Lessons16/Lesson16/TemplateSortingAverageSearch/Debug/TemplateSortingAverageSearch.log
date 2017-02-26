@@ -1,0 +1,4 @@
+﻿  Source.cpp
+d:\проекты c++ vs\repos\c++vs\exersice\lessons16\lesson16\templatesortingaveragesearch\source.cpp(50): warning C4715: 'Search<double>': not all control paths return a value
+  TemplateSortingAverageSearch.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons16\Lesson16\Debug\TemplateSortingAverageSearch.exe
+  TemplateSortingAverageSearch.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons16\Lesson16\Debug\TemplateSortingAverageSearch.pdb (Full PDB)

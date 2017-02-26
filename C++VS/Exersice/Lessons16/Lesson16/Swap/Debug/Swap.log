@@ -1,0 +1,10 @@
+﻿  Source.cpp
+d:\проекты c++ vs\repos\c++vs\exersice\lessons16\lesson16\swap\source.cpp(12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  d:\проекты c++ vs\repos\c++vs\exersice\lessons16\lesson16\swap\source.cpp(26): note: see reference to function template instantiation 'void Swap<double,int>(T1 &,T2 &)' being compiled
+          with
+          [
+              T1=double,
+              T2=int
+          ]
+  Swap.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons16\Lesson16\Debug\Swap.exe
+  Swap.vcxproj -> D:\Проекты C++ VS\Repos\C++VS\Exersice\Lessons16\Lesson16\Debug\Swap.pdb (Full PDB)
