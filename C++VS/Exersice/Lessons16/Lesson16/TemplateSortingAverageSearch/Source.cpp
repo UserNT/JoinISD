@@ -18,17 +18,22 @@ void menu()
 
 template<typename T>
 
+void Swap(T &a, T &b)
+{
+	T temp = a;
+	a = b;
+	b = temp;
+}
+
+template<typename T>
+
 void Bobble(T* arr, int Size)
 {
 	T temp;
-	for(int i(Size - 1); i > 0 ; i--)
-		for(int j(0); j < i; j++)
+	for (int i(Size - 1); i > 0; i--)
+		for (int j(0); j < i; j++)
 			if (arr[j] > arr[j + 1])
-			{
-				temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
+				Swap(arr[j], arr[j + 1]);
 }
 
 template<typename T>
