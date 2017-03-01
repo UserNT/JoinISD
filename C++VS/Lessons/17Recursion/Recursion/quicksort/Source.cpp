@@ -15,8 +15,10 @@ void QuickSort(T arr, int l, int r)
 
 	do
 	{
-		while (middle > arr[i]) i++;
-		while (middle < arr[j]) j--;
+		while (middle > arr[i])
+			i++;
+		while (middle < arr[j])
+			j--;
 
 		if (i <= j)
 		{
@@ -50,7 +52,7 @@ int main()
 
 	srand(time(NULL));
 
-	int n = 100000;
+	int n = 10;
 	int* arr = new int[n];
 
 	for (int i(0); i < n; i++)
