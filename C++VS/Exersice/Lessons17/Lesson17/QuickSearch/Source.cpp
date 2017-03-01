@@ -3,13 +3,13 @@
 
 using namespace std;
 
-long long Size = 40000000;
+long long Size = 10;
 
 template<typename T>
 
 void QuickSearch(T* arr, long long l, long long r, long long n)
 {
-	if (arr[0] > n || n > arr[r-1])
+	if (arr[l] > n || n > arr[r-1])
 	{
 		cout << "Искомый элемент не найден!\n";
 		_getch();
@@ -38,10 +38,10 @@ int main()
 	long long* arr = new long long[Size];
 
 	for (long long i(0); i < Size; i++)
-		arr[i] = i;
+		arr[i] = i*2;
 
 
-	QuickSearch(arr, 0, Size-1, 30000001);
+	QuickSearch(arr, 0, Size-1, 2);
 
 	
 	delete[] arr;
