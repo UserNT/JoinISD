@@ -3,7 +3,7 @@
 
 using namespace std;
 
-long long Size = 10;
+long long Size = 4000000;
 
 template<typename T>
 
@@ -41,7 +41,7 @@ int main()
 		arr[i] = i*2;
 
 
-	QuickSearch(arr, 0, Size-1, 2);
+	QuickSearch(arr, 0, Size-1, 2000000);
 
 	
 	delete[] arr;
