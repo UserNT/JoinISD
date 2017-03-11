@@ -15,12 +15,12 @@ private:
 public:
 	Rational_fractions();
 	Rational_fractions(int a, int b);
-	void operator+();
+	Rational_fractions operator+();
 	Rational_fractions operator+(Rational_fractions& b);
-	//Rational_fractions operator-();
+	Rational_fractions operator-();
 	Rational_fractions operator-(Rational_fractions& b);
-	/*Rational_fractions operator*(Rational_fractions& b);
-	Rational_fractions operator/(Rational_fractions& b);*/
+	Rational_fractions operator*(Rational_fractions& b);
+	Rational_fractions operator/(Rational_fractions& b);
 	friend std::ostream& operator<<(std::ostream& os, const Rational_fractions& b);	
 	
 	~Rational_fractions();

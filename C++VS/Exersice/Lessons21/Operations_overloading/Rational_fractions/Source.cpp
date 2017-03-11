@@ -8,13 +8,14 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	Rational_fractions a(-2, 4);
-	Rational_fractions b(3, 7);
-	Rational_fractions c;
+	Rational_fractions a(1, 2);
+	Rational_fractions b(2, 1);
+	Rational_fractions c;		
 	
-	c = a + b;
-
-	cout << c;
+	
+	cout << "b++ = " << +b << "; " << "a + b = " << a + b << "; " << "a * b = " << a * b << ";" << endl;
+	-b;
+	cout << "b-- = " << -b << "; " << "a - b = " << a - b << "; " << "a / b = " << a / b << ";" << endl;
 
 	_getch();
 	return 0;
