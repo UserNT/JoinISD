@@ -29,7 +29,7 @@ void SetTime(Time &t)
 		{
 			cout << "Вы ввели отрицательное число!\n";
 		}
-		if (t.minutes > 59 || t.seconds > 59)
+		if (t.minutes > 58 || t.seconds > 58)
 			cout << "Минуты и секунды должны быть меньше 60!\n";
 		cout << "Введите время чч мм сс: ";
 		cin >> t.hours >> t.minutes >> t.seconds;
