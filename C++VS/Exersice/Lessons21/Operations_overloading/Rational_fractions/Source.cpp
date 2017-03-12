@@ -10,7 +10,6 @@ int main()
 
 	Rational_fractions a(1, 2);
 	Rational_fractions b(2, 1);
-	Rational_fractions c;		
 	
 	
 	cout << "b++ = " << +b << "; " << "a + b = " << a + b << "; " << "a * b = " << a * b << ";" << endl;
