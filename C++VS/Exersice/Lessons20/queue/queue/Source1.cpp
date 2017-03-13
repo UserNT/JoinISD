@@ -30,7 +30,7 @@ int main()
 	cout << q.pop() << endl;
 	cout << q.pop() << endl;*/
 	
-	queue2 q;
+	/*queue2 q;
 
 	q.push(1);
 	q.push(2);
@@ -52,7 +52,15 @@ int main()
 	cout << q.pop() << endl;
 	cout << q.pop() << endl;
 	cout << q.pop() << endl;
-	
+	*/
+	for (int i(0); i < 1000000; i++)
+	{
+		for (int j(0); j < 100; j++)
+		{
+			queue2 q;
+			q.push(j);
+		}
+	}
 
 	_getch();
 	return 0;

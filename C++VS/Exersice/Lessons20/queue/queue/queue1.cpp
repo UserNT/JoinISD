@@ -69,6 +69,11 @@ int queue2::pop()
 }
 queue2::~queue2()
 {
-
+	while (next != NULL)
+	{
+		list* pv = next;
+		next = next->next;
+		delete pv;
+	}
 }
 

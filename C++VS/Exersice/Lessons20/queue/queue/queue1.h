@@ -134,5 +134,13 @@ public:
 		return temp;
 	}
 
-
+	~queueDM2()
+	{
+		while (begin != NULL)
+		{
+			queue* pv = begin;
+			begin = begin->next;
+			delete pv;
+		}
+	}
 };

@@ -1,10 +1,10 @@
 #include "Rational_fractions.h"
 
-int Rational_fractions::NOD(int a1, int b1)
+int Rational_fractions::NOD(int a, int b)
 {
 	int r = 1, temp, a, b;
-	a = a1 > 0 ? a1 : a1*(-1);
-	b = b1 > 0 ? b1 : b1*(-1);
+	a = a > 0 ? a : a*(-1);
+	b = b > 0 ? b : b*(-1);
 	if (a < b)
 	{
 		temp = a;
@@ -42,17 +42,26 @@ void Rational_fractions::is_negative()
 
 Rational_fractions::Rational_fractions()
 {
-	numerator = 0;
-	denominator = 0;
+	numerator = 1;
+	denominator = 1;
 	negative = false;
 }
 
 Rational_fractions::Rational_fractions(int a, int b)
 {
-	numerator = a;
-	denominator = b;
-	negative = false;
-	Reduction();
+	if (b != 0)
+	{
+		numerator = a;
+		denominator = b;
+		negative = false;
+		Reduction();
+	}
+	else
+	{
+		std::cout << "Знаменатель равен нулю! Заменяю на единичную дробь!";
+		Rational_fractions();
+	}
+
 }
 
 
@@ -84,6 +93,30 @@ Rational_fractions Rational_fractions::operator+(Rational_fractions& b)
 
 	return result;
 }
+
+//Rational_fractions Rational_fractions::operator+(Rational_fractions& b) вариант от Дениса
+//{
+//	Rational_fractions result;
+//	if (denominator == b.denominator)
+//	{
+//		result.denominator = denominator;
+//		result.numerator = numerator + b.numerator;
+//	}
+//	else
+//	{
+//		int lcm = LCM(denominator, b.denominator);
+//		int x = lcm / denominator;
+//		int y = lcm / b.denominator;
+//		result.denominator = lcm;
+//		result.numerator = numerator * x + b.numerator * y;
+//	}
+//
+//	result.is_negative();
+//	if (result.numerator != 0)
+//		result.Reduction();
+//
+//	return result;
+//}
  
 Rational_fractions Rational_fractions::operator-()
 {
@@ -139,6 +172,12 @@ Rational_fractions Rational_fractions::operator/(Rational_fractions& b)
 	return (*this)*result;
 }
 
+bool Rational_fractions::operator==(Rational_fractions& b)
+{
+	if (numerator == b.numerator && b.denominator == denominator)
+		return true;
+	else return false;
+}
 
 std::ostream& operator<<(std::ostream& os, const Rational_fractions& b)
 {

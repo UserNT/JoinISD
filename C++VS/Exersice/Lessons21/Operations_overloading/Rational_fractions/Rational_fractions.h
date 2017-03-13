@@ -1,8 +1,5 @@
 #pragma once
 #include<iostream>
-
-
-
 class Rational_fractions
 {
 private:
@@ -10,6 +7,10 @@ private:
 	int denominator;
 	bool negative;
 	int NOD(int a, int b);
+	/*int LCM(int a, int b) вариант от Дениса
+	{
+		return a*b / NOD(a, b);
+	}*/
 	void Reduction();
 	void is_negative();
 public:
