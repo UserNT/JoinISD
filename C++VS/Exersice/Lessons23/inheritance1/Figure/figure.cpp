@@ -25,6 +25,13 @@ double figure::modul(double v)
 void figure::Length_det()
 {
 	double dx, dy;
+	if (Number_of_sides == 2)
+	{
+		dx = modul(points[1].x - points[0].x);
+		dy = modul(points[1].y - points[0].y);
+		sides[0] = sqrt(dx*dx + dy*dy);
+		return;
+	}
 	for (int i(0); i < Number_of_sides; i++)
 	{
 		if (i < (Number_of_sides - 1))
@@ -45,29 +52,39 @@ void figure::Length_det()
 
 std::istream& operator>> (std::istream& in, figure& f)
 {
+	if (f.Number_of_sides == 2)
+	{
+		in >> f.points[0].x >> f.points[0].y;
+		in >> f.points[1].x >> f.points[1].y;
+		f.Length_det();
+		return in;
+	}
 	for (int i(0); i < f.Number_of_sides;  i++)
 		in >> f.points[i].x >> f.points[i].y;
 	f.Length_det();
 	return in;
 }
+
 std::ostream& operator << (std::ostream& os, figure& f)
 {
 	for (int i(0); i < f.Number_of_sides; i++)
 	{
-		if(i < f.Number_of_sides - 1)
-		{
-			os << f.points[i + 1].x << ' ' << f.points[i + 1].y << endl;
-			os << f.points[i].x << ' ' << f.points[i].y << endl;			
-			os << f.sides[i] << endl;
-		}
-		else
-		{
-			os << f.points[0].x << ' ' << f.points[0].y << endl;
-			os << f.points[i].x << ' ' << f.points[i].y << endl;
-			os << f.sides[i] << endl;
-		}		
+		os << f.points[i].x << ' ' << f.points[i].y << endl;
 	}
 	return os;
+}
+
+double* figure::getSides()
+{
+	return sides;
+}
+
+double figure::perimeter()
+{
+	double perim = 0;
+	for (int i(0); i < Number_of_sides; i++)
+		perim += sides[i];
+	return perim;
 }
 
 figure::~figure()
@@ -75,3 +92,13 @@ figure::~figure()
 	delete[] points;
 	delete[] sides;
 }
+
+
+
+square::square(): figure(Number_sides)
+{
+	
+}
+
+square::~square(){}
+
