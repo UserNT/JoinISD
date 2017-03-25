@@ -1,6 +1,7 @@
 
 #include<iostream>
 #include<conio.h>
+#include<stdexcept>
 
 using namespace std;
 
@@ -37,6 +38,26 @@ class Array
 	int Max;
 	int current_index;
 public:
+	class Bad_index
+	{
+	private:
+		int index;
+	public:		
+		Bad_index(int i)
+		{
+			index = i;
+		}
+		void what()
+		{
+			cout << "Неправильный индекс " << index << endl;
+		}
+
+	};
+	struct Error
+	{		
+		char* txt;
+		Bad_index bi;
+	};
 	Array(int size)
 	{
 		Max = size;
@@ -48,20 +69,27 @@ public:
 
 	void push(T n)
 	{
-		arr[current_index] = n;
-		current_index++;
-	}	
-	
-	T operator[](int index);	
+		if (current_index < Max)
+		{
+			arr[current_index] = n;
+			current_index++;
+		}
+		else
+			{
+				Array<T>::Error e{ "При записи, ", Array<T>::Bad_index(current_index) };
+				throw e;				
+			}
+	}
+
+	T operator[](int index);
 };
 
-template<typename T, typename T2> T Array<T, T2>::operator[](int index)
+template<typename T> T Array<T>::operator[](int index)
 {
 	if (index < 0 || index > Max - 1)
-	{
-		cout << "Wrong index!";
-		_getch();
-		abort();
+	{		
+		Array<T>::Error e{ "При чтении, ", Array<T>::Bad_index(current_index) };
+		throw e;	
 	}
 	else return arr[index];
 }
@@ -78,9 +106,28 @@ int main(int argc, char** argv)
 	a.push(3);
 	cout << a[0];
 	cout << a[2];
-
-	cout << a.get();
-
+	cout << endl;
+	
+	try
+	{
+		cout << a[5];			
+	}	
+	catch (Array<int>::Error e)
+	{
+		cout << e.txt;
+		e.bi.what();
+	}
+	try
+	{
+		a.push(5);
+	}
+	catch (Array<int>::Error e)
+	{
+		cout << e.txt;
+		e.bi.what();
+	}
+		
+	cout << a[1];
 	_getch();
 	return 0;
 }
