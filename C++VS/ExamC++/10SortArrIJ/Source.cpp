@@ -35,6 +35,8 @@ void SortNumbers(int rows, int columns, int times)
 			swap(arr[j], arr[rand() % Size]);
 
 	showArr(arr, rows, columns);
+
+	delete[] arr;
 }
 
 int main()
