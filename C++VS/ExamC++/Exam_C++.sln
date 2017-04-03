@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2COUT", "2COUT\2COUT.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11Class_Time", "Class_Time\Class_Time.vcxproj", "{6ADCDAD9-DF57-4537-B1F4-189FE67A6A48}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Caesar_cipher", "Caesar_cipher\Caesar_cipher.vcxproj", "{95A41180-D448-4B94-AC61-62BD6C80284B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{6ADCDAD9-DF57-4537-B1F4-189FE67A6A48}.Release|x64.Build.0 = Release|x64
 		{6ADCDAD9-DF57-4537-B1F4-189FE67A6A48}.Release|x86.ActiveCfg = Release|Win32
 		{6ADCDAD9-DF57-4537-B1F4-189FE67A6A48}.Release|x86.Build.0 = Release|Win32
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Debug|x64.ActiveCfg = Debug|x64
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Debug|x64.Build.0 = Debug|x64
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Debug|x86.ActiveCfg = Debug|Win32
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Debug|x86.Build.0 = Debug|Win32
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Release|x64.ActiveCfg = Release|x64
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Release|x64.Build.0 = Release|x64
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Release|x86.ActiveCfg = Release|Win32
+		{95A41180-D448-4B94-AC61-62BD6C80284B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
