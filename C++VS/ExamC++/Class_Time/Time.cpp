@@ -46,14 +46,9 @@ int TTime::GetSecond() const
 }
 
 void TTime::IncrementMinute(int Count)
-{
-	if ((minute + Count) < 60)
-		minute += Count;
-	else
-	{
-		hour++;
-		minute = (minute + Count) % 60;
-	}
+{	
+	hour += Count / 60;
+	minute = (minute + Count) % 60;	
 }
 
 void TTime::PrintTime() const
