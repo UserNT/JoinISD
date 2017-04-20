@@ -21,12 +21,16 @@ public:
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// поддержка DDX/DDV
-
+	public:
+		static int CALLBACK CompareFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
 // Реализация
 protected:
 	HICON m_hIcon;
 	List m_list;
+
+	int m_nSortColumn;
+	BOOL m_hSortAsc;
 	// Созданные функции схемы сообщений
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
@@ -40,4 +44,6 @@ public:
 	afx_msg void OnBtnDelete();
 	afx_msg void OnBtnEdit();
 	afx_msg void OnBtnAdd();
+	afx_msg void OnDblclkListStudents(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnHdnItemclickListStudents(NMHDR *pNMHDR, LRESULT *pResult);
 };

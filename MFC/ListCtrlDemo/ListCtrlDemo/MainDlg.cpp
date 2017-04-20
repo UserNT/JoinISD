@@ -54,6 +54,9 @@ CMainDlg::CMainDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_LISTCTRLDEMO_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+
+	m_nSortColumn = 0;
+	m_hSortAsc = TRUE;
 }
 
 void CMainDlg::DoDataExchange(CDataExchange* pDX)
@@ -70,6 +73,8 @@ BEGIN_MESSAGE_MAP(CMainDlg, CDialog)
 	ON_BN_CLICKED(IDC_BTN_DELETE, &CMainDlg::OnBtnDelete)
 	ON_BN_CLICKED(IDC_BTN_EDIT, &CMainDlg::OnBtnEdit)
 	ON_BN_CLICKED(IDC_BTN_ADD, &CMainDlg::OnBtnAdd)
+	ON_NOTIFY(NM_DBLCLK, IDC_LIST_STUDENTS, &CMainDlg::OnDblclkListStudents)
+	ON_NOTIFY(HDN_ITEMCLICK, 0, &CMainDlg::OnHdnItemclickListStudents)
 END_MESSAGE_MAP()
 
 
@@ -189,10 +194,12 @@ void CMainDlg::FilList()
 
 		m_ctrlList.SetItemText(nItem, 1, sMark);
 
-		m_ctrlList.SetItemData(nItem, (DWORD_PTR)st);
+		m_ctrlList.SetItemData(nItem, (DWORD_PTR)st);//Запись указателя элемента
 
 		st = m_list.GetNext();
 	}
+
+	m_ctrlList.SortItems(CompareFunc, (DWORD_PTR)this);
 }
 
 
@@ -253,7 +260,7 @@ void CMainDlg::OnBtnEdit()
 	{
 		int nIndex = m_ctrlList.GetNextSelectedItem(pos);
 
-		Student* st = (Student*)m_ctrlList.GetItemData(nIndex);
+		Student* st = (Student*)m_ctrlList.GetItemData(nIndex); //получение указателя элемента с индексом nIndex
 
 		if (st == NULL)
 		{
@@ -293,4 +300,82 @@ void CMainDlg::OnBtnAdd()
 		m_list.PushBack(&st);
 		FilList();
 	}
+}
+
+
+void CMainDlg::OnDblclkListStudents(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
+	
+	if (m_ctrlList.GetSelectedCount() == 0)
+	{
+		OnBtnAdd();
+	}
+	else
+	{
+		OnBtnEdit();
+	}
+
+	*pResult = 0;
+}
+
+
+void CMainDlg::OnHdnItemclickListStudents(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
+	
+	if (m_nSortColumn != phdr->iItem)
+	{
+		m_nSortColumn = phdr->iItem;
+		m_hSortAsc = TRUE;
+	}
+	else
+	{
+		m_hSortAsc = !m_hSortAsc;
+	}
+
+
+	m_nSortColumn = phdr->iItem;//phdr->iItem информация по какому столбцу произведен клик
+
+	m_ctrlList.SortItems(CompareFunc, (DWORD_PTR)this);
+
+	*pResult = 0;
+}
+
+int CALLBACK CMainDlg::CompareFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort)//статическая функция обращается только к статическим членам класса
+{
+	Student* st1 = (Student*)lParam1;
+	Student* st2 = (Student*)lParam2;
+
+	CMainDlg* pThis = (CMainDlg*)lParamSort;
+
+	int nResult = 0;
+
+	switch (pThis->m_nSortColumn)
+	{
+	case 0:
+		nResult = st1->GetName().Compare(st2->GetName());
+		break;
+	case 1:
+		if (st1->GetMark() < st2->GetMark())
+		{
+			nResult = -1;
+		}
+		else if (st1->GetMark() == st2->GetMark())
+				{
+					nResult = 0;
+				}
+				else
+				{
+					nResult = 1;
+				}
+		break;
+	}
+
+	if (pThis->m_hSortAsc == FALSE)
+	{
+		nResult = nResult * -1;
+	}
+
+	return nResult;
 }
