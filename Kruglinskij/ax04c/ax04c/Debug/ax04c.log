@@ -1,0 +1,13 @@
+﻿  stdafx.cpp
+  ViewTree.cpp
+  PropertiesWnd.cpp
+  OutputWnd.cpp
+  MainFrm.cpp
+  FileView.cpp
+  ClassView.cpp
+  ax04cView.cpp
+  ax04cDoc.cpp
+  ax04c.cpp
+  Generating Code...
+  ax04c.vcxproj -> D:\Проекты C++ VS\Repos\Kruglinskij\ax04c\Debug\ax04c.exe
+  ax04c.vcxproj -> D:\Проекты C++ VS\Repos\Kruglinskij\ax04c\Debug\ax04c.pdb (Partial PDB)

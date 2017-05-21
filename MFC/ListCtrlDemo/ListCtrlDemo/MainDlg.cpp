@@ -226,7 +226,7 @@ void CMainDlg::OnBtnDelete()
 
 	CString sMsg;
 
-	sMsg.Format(L"Удалить студента %s", st->GetName());
+	sMsg.Format(L"Удалить студента \"%s\"", st->GetName());
 
 	if (IDYES != MessageBox(sMsg + "?", L"Удаление", MB_YESNO | MB_ICONQUESTION))
 	{
@@ -335,7 +335,7 @@ void CMainDlg::OnHdnItemclickListStudents(NMHDR *pNMHDR, LRESULT *pResult)
 	}
 
 
-	m_nSortColumn = phdr->iItem;//phdr->iItem информация по какому столбцу произведен клик
+	//m_nSortColumn = phdr->iItem;//phdr->iItem информация по какому столбцу произведен клик
 
 	m_ctrlList.SortItems(CompareFunc, (DWORD_PTR)this);
 
@@ -343,7 +343,7 @@ void CMainDlg::OnHdnItemclickListStudents(NMHDR *pNMHDR, LRESULT *pResult)
 }
 
 int CALLBACK CMainDlg::CompareFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort)//статическая функция обращается только к статическим членам класса
-{
+{																					//lParam1, lParam2 - сравниваемые эл.; lParamSort - параметры переданные в вызове SortItems ((DWORD_PTR)this)
 	Student* st1 = (Student*)lParam1;
 	Student* st2 = (Student*)lParam2;
 

@@ -1,0 +1,15 @@
+﻿  stdafx.cpp
+  ClassView.cpp
+  ex03a.cpp
+  ex03aDoc.cpp
+  ex03aView.cpp
+  FileView.cpp
+  MainFrm.cpp
+  OutputWnd.cpp
+  PropertiesWnd.cpp
+  ViewTree.cpp
+  Generating code
+  All 665 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ex03a.vcxproj -> D:\Проекты C++ VS\Repos\Kruglinskij\ex03a\Release\ex03a.exe
+  ex03a.vcxproj -> D:\Проекты C++ VS\Repos\Kruglinskij\ex03a\Release\ex03a.pdb (Full PDB)
