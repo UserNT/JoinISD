@@ -36,7 +36,7 @@ protected:
 	// Обработка команды Файл | Выход
 	afx_msg void OnMenuFileExit(void);
 	// Обработка команды Стиль карандаша | Сплошной
-	afx_msg void OnMenuPenstyleSolid(void);
+	afx_msg void OnPenstyleSolid(void);
 	// Обработка команды Стиль карандаша | Пунктир
 	afx_msg void OnMenuPenstyleDash(void);
 	// Обработка команды Стиль карандаша | Точечный
@@ -49,9 +49,9 @@ private:
 	void SetRhombVertexes(void);
 	// Рисование ромба
 	void DrawRhomb(CDC *pDC);
-
 	// Объявление таблицы сообщений
 	DECLARE_MESSAGE_MAP();
+	
 };
 
 #endif

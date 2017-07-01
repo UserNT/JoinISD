@@ -21,7 +21,7 @@ Microsoft Visual Studio C++ .NET 2005
 BEGIN_MESSAGE_MAP(FrameWnd, CFrameWnd)
 	ON_WM_PAINT()
 	ON_COMMAND(ID_FILE_EXIT, OnMenuFileExit)
-	ON_COMMAND(ID_PENSTYLE_SOLID, OnMenuPenstyleSolid)
+	ON_COMMAND(ID_PENSTYLE_SOLID , OnPenstyleSolid)
 	ON_COMMAND(ID_PENSTYLE_DASH, OnMenuPenstyleDash)
 	ON_COMMAND(ID_PENSTYLE_DOT, OnMenuPenstyleDot)
 END_MESSAGE_MAP()
@@ -65,9 +65,8 @@ afx_msg void FrameWnd::OnPaint(void)
 
 	return afx_msg void();
 }
-
 // Обработка команды Стиль карандаша | Сплошной
-afx_msg void FrameWnd::OnMenuPenstyleSolid(void)
+afx_msg void FrameWnd::OnPenstyleSolid()
 {
 	m_PenStyle = PS_SOLID;
 	CWnd::Invalidate();
@@ -160,3 +159,7 @@ void FrameWnd::DrawRhomb(
 
 	return;
 }
+
+
+
+
