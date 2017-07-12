@@ -44,8 +44,8 @@ afx_msg int FrameWnd::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	// Создаем и визуализируем окно Windows для линейки
 	//   инструментов
 	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD
-		| WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS
-		| CBRS_FLYBY | CBRS_SIZE_DYNAMIC, CRect(0, 0, 0, 0)) ||
+		| WS_VISIBLE | CBRS_TOP/* | CBRS_GRIPPER */| CBRS_TOOLTIPS
+		| CBRS_FLYBY | CBRS_SIZE_DYNAMIC /*| CBRS_SIZE_FIXED*/, CRect(0, 0, 0, 0)) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
 	{
 		TRACE0("\n Ошибка 2 создания панели инструментов \n");
