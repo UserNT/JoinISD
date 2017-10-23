@@ -1,0 +1,13 @@
+﻿  stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  Main.cpp
+Main.cpp(14): warning C4603: '_CRT_SECURE_NO_WARNINGS': macro is not defined or definition is different after precompiled header use
+  Main.cpp(14): note: Add macro to precompiled header instead of defining here
+  Main.cpp(15): note: use of precompiled header
+  Generating code
+  Finished generating code
+  All 126 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  TestFrameWndExDLL.vcxproj -> D:\Проекты C++ VS\Repos\MFCandAPI\11\TestFrameWndExDLL\Release\TestFrameWndExDLL.exe
+  TestFrameWndExDLL.vcxproj -> D:\Проекты C++ VS\Repos\MFCandAPI\11\TestFrameWndExDLL\Release\TestFrameWndExDLL.pdb (Full PDB)

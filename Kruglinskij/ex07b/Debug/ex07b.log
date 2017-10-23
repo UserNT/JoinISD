@@ -1,0 +1,20 @@
+﻿  stdafx.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  SpecFileDlg.cpp
+d:\проекты c++ vs\repos\kruglinskij\ex07b\specfiledlg.cpp(52): error C2039: 'SetWindowTextW': is not a member of 'CWnd'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afxwin.h(2176): note: see declaration of 'CWnd'
+  MainFrm.cpp
+  ex07bView.cpp
+  ex07bDoc.cpp
+  ex07b.cpp
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(156): error C2504: 'CFileDialogEx': base class undefined
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(174): error C2614: 'CAboutDlg': illegal member initialization: 'CFileDialogEx' is not a base or member
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(179): error C2653: 'CFileDialogEx': is not a class or namespace name
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(182): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(182): error C2146: syntax error: missing ';' before identifier 'TheBaseClass'
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(182): error C2065: 'TheBaseClass': undeclared identifier
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(183): error C2653: 'TheBaseClass': is not a class or namespace name
+d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(189): error C2039: 'DoModal': is not a member of 'CAboutDlg'
+  d:\проекты c++ vs\repos\kruglinskij\ex07b\ex07b.cpp(155): note: see declaration of 'CAboutDlg'
+  Generating Code...

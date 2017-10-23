@@ -1,0 +1,11 @@
+﻿  Main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  Generating code
+  All 126 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  UsgMenuExDLLResource.vcxproj -> D:\Проекты C++ VS\Repos\MFCandAPI\11\UsgMenuExDLLResource\Release\UsgMenuExDLLResource.exe
+  UsgMenuExDLLResource.vcxproj -> D:\Проекты C++ VS\Repos\MFCandAPI\11\UsgMenuExDLLResource\Release\UsgMenuExDLLResource.pdb (Full PDB)
